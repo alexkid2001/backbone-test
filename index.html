@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Backbone Tutorial</title>
+</head>
+<body>
+<div class="container">
+    <h1>TASK 2</h1>
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody class="users-list"></tbody>
+        <tfooter>
+            <tr>
+                <td>
+                    <input type="text" class="form-control name-input">
+                    <div class="invalid-feedback">Min 2 chars</div>
+                </td>
+                <td>
+                    <input type="text" class="form-control phone-input">
+                    <div class="invalid-feedback">Not valid. Min 7 digit, "+", "-"  </div>
+                </td>
+                <td>
+                    <button class="btn btn-primary add-user">Add</button>
+                </td>
+            </tr>
+        </tfooter>
+    </table>
+</div>
+
+<script type="text/template" class="users-list-template">
+    <td>
+        <span class="name"><%= name %></span>
+        <div class="input-wrap hide">
+            <input type="text" class="form-control name-update" value=<%= name %>>
+            <div class="invalid-feedback">Min 2 chars</div>
+        </div>
+    </td>
+    <td>
+        <span class="phone"><%= phone %></span>
+        <div class="input-wrap hide">
+            <input type="text" class="form-control phone-update" value=<%= phone %>>
+            <div class="invalid-feedback">Not valid. Min 7 digit, "+", "-"</div>
+        </div>
+    </td>
+    <td>
+        <button class="btn btn-warning edit-btn">Edit</button>
+        <button class="btn btn-danger delete-btn">Delete</button>
+        <button class="btn btn-success update-btn" style="display:none">Update</button>
+        <button class="btn btn-danger cancel-btn" style="display:none">Cancel</button>
+    </td>
+
+</script>
+
+<script src="assets/js/lib/jquery.js"></script>
+<script src="assets/js/lib/underscore.js"></script>
+<script src="assets/js/lib/backbone.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
